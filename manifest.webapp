@@ -1,14 +1,14 @@
 {
   "name": "IMC",
-  "description": "XXX",
-  "launch_path": "/ingresar_datos.html",
+  "description": "Aplicación que calcula el índice de masa corporal",
+  "launch_path": "/datos.html",
   "icons": {
     "128": "/img/icon-128.png",
     "512": "/img/icon-512.png"
   },
   "developer": {
-    "soy yo": "Your name or organization",
+    "name": "Hackem Research Group",
     "url": "http://google.com"
   },
-  "default_locale": "en"
+  "default_locale": "es"
 }
