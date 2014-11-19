@@ -1,256 +1,243 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>INGRESAR DATOS</title>
-  </head>
-  <body>
-    <h1>INGRESAR DATOS</h1>
-	<h3>Altura(m)  <input id="altura" type="text" size="30"  /> </h3>
-	<h3>Peso(kg)  <input id="peso" type="text" size="30"  /> </h3>
-	<h3>Edad  <input id="edad" type="text" size="30" /> </h3>
-	<input id="ingresar" type="submit" value="Ingresar !" onclick="tipo_imc()" />   
+
+<head>
+  <title>INGRESAR DATOS</title>
+</head>
+
 <script>
-	var altura;
-	var peso;
-	var edad;
-	var IMC;
-	//IMC=peso/(altura*altura);
+var altura, peso, edad, imc, resultado;
 
-	function tipo_imc(){
-		altura = document.getElementById('altura').value;
-		peso = document.getElementById('peso').value;
-		edad = document.getElementById('edad').value;
-		IMC=peso/(altura*altura);
+function tipo_imc() {
+  altura = document.getElementById('altura').value;
+  peso = document.getElementById('peso').value;
+  edad = document.getElementById('edad').value;
+  imc = peso/(altura*altura);
 
-		if(edad>=19)
-		{
-			if (IMC<16)
-			
-				resultado='Usted presenta un caso de desnutrición severa';
-			
-			else if (IMC >=16.0 && IMC<17.0)
-				resultado='Desnutrición moderada';
-			else if (IMC>=17 && IMC<18.5 )
-				resultado='Desnutrición leve';
-			else if (IMC>=18.5 && IMC<25.0)
-				resultado='Nutrición Adecuada';
-			else if (IMC>=25.0 && IMC<30.0)
-				resultado='Sobrepeso';
-			else 
-				resultado='Obesidad';
-
-		 }
-		if( edad ===5 )
-		{
-			if(IMC<12.1)
-				resultado='Desnutrición severa';
-			else if(IMC>=12.1 && IMC <=12.9)
-				resultado='Desnutrición moderada';
-			else if(IMC>=13 && IMC<=14)
-				resultado='Desnutrición leve';
-			else if(IMC>=14.1 && IMC<=16.5)
-				resultado='Nutrición Adecuada';
-			else if(IMC>=16.6 && IMC<18.3)
-				resultado='Sobrepeso';
-			else
-				resultado='Obesidad';
-		}
-		if(edad ===6)
-		{
-			if(IMC<12.1)
-				resultado='Desnutrición severa';
-			 else if(IMC>=12.1 && IMC <=13)
-				resultado='Desnutrición moderada';
-			else if (IMC>=13 && IMC<=14)
-				resultado='Desnutrición leve';
-			else if(IMC>=14.1 && IMC<16.8)
-				resultado='Nutrición Adecuada';
-			else if(IMC>=16.8 && IMC<18.5)
-				resultado='Sobrepeso';
-			else 
-				resultado='Obesidad';
-		}
-		if (edad ===7)
-			{
-				if(IMC<12.3)
-					resultado='Desnutrición severa';
-				else if(IMC>=12.3 && IMC <=13.1)
-					resultado='Desnutrición moderada';
-				else if ( IMC>13.1 && IMC<=14.2)
-					resultado='Desnutrición leve';
-				else if(IMC>14.2 && IMC<17.1)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=17.1 && IMC<19.1)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if(edad ===8)	
-			{
-				if(IMC<12.4)
-					resultado='Desnutrición severa';
-				else if (IMC>=12.4 && IMC <13.3)
-					resultado='Desnutrición moderada';
-				else if (IMC>=13.3&& IMC<14.4)
-					resultado='Desnutrición leve';
-				else if (IMC>=14.4 && IMC<17.6)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=17.6 && IMC<19.7)
-					resultado='Sobrepeso';
-				else ('Obesidad');
-			}
-		if (edad ===9)
-			{
-				if (IMC<12.6)
-					resultado='Desnutrición severa';
-				else if(IMC>=12.6 && IMC <13.5)
-					resultado='Desnutrición moderada';
-				else if(IMC>=13.5&& IMC<14.7)
-					resultado='Desnutrición leve';
-				else if(IMC>=14.7 && IMC<18.1)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=18.1 && IMC<20.5)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if (edad ===10)
-			{
-				if(IMC<12.8)
-					resultado='Desnutrición severa';
-				else if (IMC>=12.8 && IMC <13.8)
-					resultado='Desnutrición moderada';
-				else if(IMC>=13.8 && IMC<15)
-					resultado='Desnutrición leve';
-				else if( IMC>=15 && IMC<18.6)
-					resultado='Nutrición Adecuada';
-				else if ( IMC>=18.6 && IMC<21.8)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if( edad ===11)
-			{
-				if(IMC<13.1)
-					resultado='Desnutrición severa';
-				else if(IMC>=13.1 && IMC <14.1)
-					resultado='Desnutrición moderada';
-				else if(IMC>=14.1 && IMC<15.4)
-					resultado='Desnutrición leve';
-				else if (IMC>=15.4 && IMC<19.4)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=19.4 && IMC<22.6)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if(edad ===12)
-			{
-				if(IMC<13.4)
-					resultado='Desnutrición severa';
-				else if(IMC>=13.4 && IMC <14.6)
-					resultado='Desnutrición moderada';
-				else if(IMC>=14.6 && IMC<16)
-					resultado='Desnutrición leve';
-				else if (IMC>=16 && IMC<20.3)
-					resultado='Nutrición Adecuada';
-				else if (IMC>=20.3 && IMC<24.1)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';	
-			}
-		if(edad ===13)	
-			{
-				if(IMC<13.8)
-					resultado='Desnutrición severa';
-				else if(IMC>=13.8 && IMC <15.1)
-					resultado='Desnutrición moderada';
-				else if (IMC>=15.1 && IMC<16.6) 
-					resultado='Desnutrición leve';
-				else if (IMC>=16.6 && IMC<21.2) 
-					resultado='Nutrición Adecuada';
-				else if (IMC>=21.2 && IMC<25.2)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if(edad===14)
-			{
-				if(IMC<14.3)
-					resultado='Desnutrición severa';
-				else if(IMC>=14.3 && IMC <15.6)
-					resultado='Desnutrición moderada';
-				else if(IMC>=15.6 && IMC<17.2)
-					resultado='Desnutrición leve';
-				else if(IMC>=17.2 && IMC<22.1)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=22.1 && IMC<26.4)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if(edad ===15)
-			{
-				if(IMC<14.7)
-					resultado='Desnutrición severa';
-				else if(IMC>=14.7 && IMC <16.2)
-					resultado='Desnutrición moderada';
-				else if(IMC>=16.2 && IMC<17.9)
-					resultado='Desnutrición leve';
-				else if(IMC>=17.9 && IMC<23)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=23 && IMC<27.3)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if(edad ===16)
-			{
-				if(IMC<15.1)
-					resultado='Desnutrición severa';
-				else if(IMC>=15.1 && IMC <16.6)
-					resultado='Desnutrición moderada';
-				else if(IMC>=16.6 && IMC<18.4)
-					resultado='Desnutrición leve';
-				else if(IMC>=18.4 && IMC<23.8)
-					resultado='Nutrición Adecuada';
-				else if (IMC>=23.8 && IMC<28.2)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if(edad ===17)
-			{
-				if(IMC<15.4)
-					resultado='Desnutrición severa';
-				else if (IMC>=15.4 && IMC <17)
-					resultado='Desnutrición moderada';
-				else if(IMC>=17 && IMC<18.9)
-					resultado='Desnutrición leve';
-				else if (IMC>=18.9 && IMC<24.5)
-					resultado='	Nutrición Adecuada';
-				else if(IMC>=24.5 && IMC<28.9)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-		if (edad ===18)
-			{
-				if(IMC<15.7)
-					resultado='Desnutrición severa';
-				else if(IMC>=15.7 && IMC<17.2)
-					resultado='Desnutrición moderada';
-				else if(IMC>=17.2 && IMC<19.1)
-					resultado='Desnutrición leve';
-				else if(IMC>=19.1 && IMC<24.8)
-					resultado='Nutrición Adecuada';
-				else if(IMC>=24.8 && IMC<29.1)
-					resultado='Sobrepeso';
-				else
-					resultado='Obesidad';
-			}
-alert(resultado);
+  if(edad >= 19) {
+    if(imc < 16)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 16.0 && imc < 17.0)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 17 && imc < 18.5 )
+      resultado = 'Desnutrición leve';
+    else if(imc >= 18.5 && imc < 25.0)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 25.0 && imc < 30.0)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 5) {
+    if(imc < 12.1)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 12.1 && imc <= 12.9)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 13 && imc <= 14)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 14.1 && imc <= 16.5)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 16.6 && imc < 18.3)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 6) {
+    if(imc < 12.1)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 12.1 && imc <= 13)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 13 && imc <= 14)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 14.1 && imc < 16.8)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 16.8 && imc < 18.5)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 7) {
+    if(imc < 12.3)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 12.3 && imc <= 13.1)
+      resultado = 'Desnutrición moderada';
+    else if(imc > 13.1 && imc <= 14.2)
+      resultado = 'Desnutrición leve';
+    else if(imc > 14.2 && imc < 17.1)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 17.1 && imc < 19.1)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 8) {
+    if(imc < 12.4)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 12.4 && imc < 13.3)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 13.3 && imc < 14.4)
+      resultado ='Desnutrición leve';
+    else if(imc >= 14.4 && imc < 17.6)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 17.6 && imc < 19.7)
+      resultado = 'Sobrepeso';
+    else ('Obesidad');
+  }
+  if(edad === 9) {
+    if(imc < 12.6)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 12.6 && imc < 13.5)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 13.5 && imc < 14.7)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 14.7 && imc < 18.1)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 18.1 && imc < 20.5)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 10) {
+    if(imc < 12.8)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 12.8 && imc < 13.8)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 13.8 && imc < 15)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 15 && imc < 18.6)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 18.6 && imc < 21.8)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 11) {
+    if(imc < 13.1)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 13.1 && imc < 14.1)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 14.1 && imc < 15.4)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 15.4 && imc < 19.4)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 19.4 && imc < 22.6)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 12) {
+    if(imc < 13.4)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 13.4 && imc < 14.6)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 14.6 && imc < 16)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 16 && imc < 20.3)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 20.3 && imc < 24.1)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 13)
+  {
+    if(imc < 13.8)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 13.8 && imc < 15.1)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 15.1 && imc < 16.6)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 16.6 && imc < 21.2)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 21.2 && imc < 25.2)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 14)
+  {
+    if(imc < 14.3)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 14.3 && imc < 15.6)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 15.6 && imc < 17.2)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 17.2 && imc < 22.1)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 22.1 && imc < 26.4)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 15)
+  {
+    if(imc < 14.7)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 14.7 && imc < 16.2)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 16.2 && imc < 17.9)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 17.9 && imc < 23)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 23 && imc < 27.3)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 16)
+  {
+    if(imc < 15.1)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 15.1 && imc < 16.6)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 16.6 && imc < 18.4)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 18.4 && imc < 23.8)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 23.8 && imc < 28.2)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 17)
+  {
+    if(imc < 15.4)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 15.4 && imc < 17)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 17 && imc < 18.9)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 18.9 && imc < 24.5)
+      resultado = '	Nutrición Adecuada';
+    else if(imc >= 24.5 && imc < 28.9)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  if(edad === 18)
+  {
+    if(imc < 15.7)
+      resultado = 'Desnutrición severa';
+    else if(imc >= 15.7 && imc < 17.2)
+      resultado = 'Desnutrición moderada';
+    else if(imc >= 17.2 && imc < 19.1)
+      resultado = 'Desnutrición leve';
+    else if(imc >= 19.1 && imc < 24.8)
+      resultado = 'Nutrición Adecuada';
+    else if(imc >= 24.8 && imc < 29.1)
+      resultado = 'Sobrepeso';
+    else
+      resultado = 'Obesidad';
+  }
+  alert(resultado);
 }
 </script>
-  </body>
+
+<body>
+  <h1>INGRESAR DATOS</h1>
+  <h3>Altura (m) <input id="altura" type="text" size="30"/></h3>
+  <h3>Peso (kg) <input id="peso" type="text" size="30"/></h3>
+  <h3>Edad <input id="edad" type="text" size="30"/></h3>
+  <input id="calcular" type="submit" value="Calcular IMC" onclick="tipo_imc()"/>
+</body>
 </html>

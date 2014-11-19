@@ -1,5 +1,5 @@
 {
-  "name": "IMC",
+  "name": "Calculadora IMC",
   "description": "Aplicación que calcula el índice de masa corporal",
   "launch_path": "/datos.html",
   "icons": {
@@ -8,7 +8,7 @@
   },
   "developer": {
     "name": "Hackem Research Group",
-    "url": "http://google.com"
+    "url": "http://www.hackem.org"
   },
   "default_locale": "es"
 }
